@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator dochodu</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Kalkulator dochodu</h1>
+
+  <form id="entryForm">
+    <input type="date" id="date" required />
+    <input type="text" id="description" placeholder="Opis" required />
+    <input type="number" id="amount" step="0.01" placeholder="Kwota" required />
+    
+    <select id="type">
+      <option value="income">Przychód</option>
+      <option value="expense">Wydatek</option>
+    </select>
+
+    <button type="submit">Dodaj</button>
+  </form>
+
+  <button id="exportCsv">Eksport CSV</button>
+
+  <h2>Lista wpisów</h2>
+  <ul id="entries"></ul>
+
+  <script src="storage.js"></script>
+  <script src="csv.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
 
